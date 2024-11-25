@@ -39,31 +39,54 @@ namespace Linter
             ImmutableArray.Create(NamingPolicyRule);
 
         private ImmutableArray<SymbolKind> SymbolKinds =>
-            ImmutableArray.Create<SymbolKind>(
+            ImmutableArray.Create(
                 SymbolKind.Method,
                 SymbolKind.NamedType,
                 SymbolKind.Parameter,
                 SymbolKind.Property,
-                SymbolKind.Field,
-                SymbolKind.Local);
-
+                SymbolKind.Field
+            );
         public override void Initialize(AnalysisContext context)
         {
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
             context.RegisterSymbolAction(SymbolAction, SymbolKinds);
+            context.RegisterSyntaxNodeAction(SyntaxNodeAction, SyntaxKind.LocalDeclarationStatement);
+        }
+
+        private void SyntaxNodeAction(SyntaxNodeAnalysisContext context)
+        {
+            
+            var node = (LocalDeclarationStatementSyntax)context.Node;
+
+            foreach (var localVar in node.Declaration.Variables)
+            {
+                string varName = localVar.Identifier.Text;
+                bool isComforting = lowerCamelCaseRegex.IsMatch(varName);
+                    if (isComforting) 
+                        return;
+
+                context.ReportDiagnostic(
+                    Diagnostic.Create(
+                        NamingPolicyRule,
+                        localVar.Identifier.GetLocation(),
+                        varName));
+                
+            }
+            
+            
         }
 
         private void SymbolAction(SymbolAnalysisContext context)
         {
             ISymbol symbol = context.Symbol;
 
-            if (symbol.Kind is SymbolKind.Method or SymbolKind.NamedType)
+            if (symbol.Kind is (SymbolKind.Method or SymbolKind.NamedType))
             {
                 bool isComforting = upperCamelCaseRegex.IsMatch(symbol.Name);
-                if (isComforting) 
+                if (isComforting)
                     return;
-                
+
                 context.ReportDiagnostic(
                     Diagnostic.Create(
                         NamingPolicyRule,
@@ -71,13 +94,13 @@ namespace Linter
                         symbol.Name));
                 return;
             }
-            
-            if (symbol.Kind is  SymbolKind.Parameter or SymbolKind.Property or SymbolKind.Field or SymbolKind.Local)
+
+            if (symbol.Kind is (SymbolKind.Parameter or SymbolKind.Property))
             {
-                bool isComforting = upperCamelCaseRegex.IsMatch(symbol.Name);
-                if (isComforting) 
+                bool isComforting = lowerCamelCaseRegex.IsMatch(symbol.Name);
+                if (isComforting)
                     return;
-                
+
                 context.ReportDiagnostic(
                     Diagnostic.Create(
                         NamingPolicyRule,
@@ -85,40 +108,30 @@ namespace Linter
                         symbol.Name));
                 return;
             }
+
+            if (symbol.Kind == SymbolKind.Field)
+            {
+                bool isComforting;
+                IFieldSymbol field = (IFieldSymbol)symbol;
+                if (field.IsConst)
+                {
+                    isComforting = snakeCaseRegex.IsMatch(field.Name);
+                }
+                else
+                {
+                    isComforting = lowerCamelCaseRegex.IsMatch(symbol.Name);
+                }
+
+                if (isComforting)
+                    return;
+
+                context.ReportDiagnostic(
+                    Diagnostic.Create(
+                        NamingPolicyRule,
+                        symbol.Locations[0],
+                        symbol.Name));
+            }
             
-            // INamedTypeSymbol namedTypeSymbol = (INamedTypeSymbol)context.Symbol;
-            //
-            // // Find just those named type symbols that have members with the same name as the named type.
-            // if (namedTypeSymbol.GetMembers(namedTypeSymbol.Name).Any())
-            // {
-            //     // For all such symbols, report a diagnostic.
-            //     context.ReportDiagnostic(
-            //         Diagnostic.Create(
-            //             Rule,
-            //             namedTypeSymbol.Locations[0],
-            //             namedTypeSymbol.Name));
-            // }
-        }
-        
-        private static void SymbolAction1(CodeBlockAnalysisContext codeBlockContext)
-        {
-            
-            // // We only care about method bodies.
-            // // if (codeBlockContext.OwningSymbol.Kind != SymbolKind.Method)
-            // // {
-            // //     return;
-            // // }
-            //
-            // // Report diagnostic for void non-virtual methods with empty method bodies.
-            // // IMethodSymbol method = (IMethodSymbol)codeBlockContext.OwningSymbol;
-            // // BlockSyntax block = (BlockSyntax)codeBlockContext.CodeBlock.ChildNodes().FirstOrDefault(n => n.Kind() == SyntaxKind.Block);
-            // // if (method.ReturnsVoid && !method.IsVirtual && block != null && block.Statements.Count == 0)
-            // // {
-            //     SyntaxTree tree = block.SyntaxTree;
-            //     Location location = method.Locations.First(l => tree.Equals(l.SourceTree));
-            //     Diagnostic diagnostic = Diagnostic.Create(Rule, location, method.Name);
-            //     codeBlockContext.ReportDiagnostic(diagnostic);
-            // // }
         }
     }
 }

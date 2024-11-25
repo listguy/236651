@@ -1,11 +1,17 @@
 ﻿namespace Test.Project;
 
-public class Class1
+public class class1
 {
-    void EmptyMethod()
+    public const string SHEM_HUKI = "hello world!";
+    private string Momi;
+    public string abale => "Abale";
+    void EmptyMethod(string Papi)
     {
-        var a = 1;
-        
+        var Aba = 1;
+        int BBB = abale.Length;
+
+        BBB = Aba;
+
     }
 
     string A()
