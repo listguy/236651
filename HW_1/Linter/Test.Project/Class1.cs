@@ -1,20 +1,31 @@
 ﻿namespace Test.Project;
 
-public class class1
+
+public class LegalClass
 {
-    public const string SHEM_HUKI = "hello world!";
-    private string Momi;
-    public string abale => "Abale";
-    void EmptyMethod(string Papi)
+    private const string LEGAL_GLOBAL = "Hello World";
+    public const string illegal_GLOBAL = "Hello World";
+    private const string ILLEGAL_GLOBAL1 = "Hello World";
+}
+public class illegalClass
+{
+    private string BADname;
+    private string badName2_;
+    private string goodName;
+    private string goodName2;
+    public string goodProperty => "Abale";
+    public string BadProperty => "Abale2";
+    void badMethod() {}
+    void GoodMethod(string Papi)
     {
-        var Aba = 1;
-        int BBB = abale.Length;
-
-        BBB = Aba;
-
+        var Aaa = 1;
+        int BBB = 2;
+        int cCC = 3;
+        int dDd = 4;
+        int eee = 5;
     }
 
-    string A()
+    string A(string good)
     {
         return "    ";
     }
