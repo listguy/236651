@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Analyzer Include="C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\bin\Debug\net7.0\Linter.dll" />
+    </ItemGroup>
+
+</Project>

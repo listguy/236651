@@ -1,0 +1,12 @@
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\bin\Debug\net7.0\Linter.deps.json
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\bin\Debug\net7.0\Linter.dll
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\bin\Debug\net7.0\Linter.pdb
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\Linter.csproj.AssemblyReference.cache
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\Linter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\Linter.AssemblyInfoInputs.cache
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\Linter.AssemblyInfo.cs
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\Linter.csproj.CoreCompileInputs.cache
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\Linter.dll
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\refint\Linter.dll
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\Linter.pdb
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Linter\obj\Debug\net7.0\ref\Linter.dll

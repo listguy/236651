@@ -1,0 +1,12 @@
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\bin\Debug\net7.0\Test.Project.deps.json
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\bin\Debug\net7.0\Test.Project.dll
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\bin\Debug\net7.0\Test.Project.pdb
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\Test.Project.csproj.AssemblyReference.cache
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\Test.Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\Test.Project.AssemblyInfoInputs.cache
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\Test.Project.AssemblyInfo.cs
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\Test.Project.csproj.CoreCompileInputs.cache
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\Test.Project.dll
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\refint\Test.Project.dll
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\Test.Project.pdb
+C:\Users\nitza\Documents\Programming\C\Semester_G\HW_1\Linter\Test.Project\obj\Debug\net7.0\ref\Test.Project.dll

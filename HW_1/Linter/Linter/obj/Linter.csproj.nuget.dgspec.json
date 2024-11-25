@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\nitza\\Documents\\Programming\\C\\Semester_G\\HW_1\\Linter\\Linter\\Linter.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\nitza\\Documents\\Programming\\C\\Semester_G\\HW_1\\Linter\\Linter\\Linter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nitza\\Documents\\Programming\\C\\Semester_G\\HW_1\\Linter\\Linter\\Linter.csproj",
+        "projectName": "Linter",
+        "projectPath": "C:\\Users\\nitza\\Documents\\Programming\\C\\Semester_G\\HW_1\\Linter\\Linter\\Linter.csproj",
+        "packagesPath": "C:\\Users\\nitza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nitza\\Documents\\Programming\\C\\Semester_G\\HW_1\\Linter\\Linter\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\nitza\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.CodeAnalysis": {
+              "target": "Package",
+              "version": "[4.12.0-3.final, )"
+            },
+            "Microsoft.CodeAnalysis.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp": {
+              "target": "Package",
+              "version": "[4.12.0-3.final, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
